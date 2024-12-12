@@ -10,7 +10,7 @@ import { CreateProductDto, UpdateProductDto } from './dto';
 @Controller('products')
 export class ProductsController {
   constructor(
-    @Inject(NATS_SERVICE) // Inyectamos el microservicio de productos.
+    @Inject(NATS_SERVICE) // Inyectamos el microservicio de productos. (Ahora usamos NATS como canal de comunicacion entre microservicios)
     private readonly client : ClientProxy // Es un estandar que el ms sea llamado client pero en este caso lo llamamos productClient para saber a que ms corresponde.
   ) {}
 
